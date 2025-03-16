@@ -14,6 +14,9 @@ try {
             )
         )
         .click();
+    await driver.sleep(5_000);
+    await driver.quit();
 } catch (error) {
     console.log(error);
+    await driver.quit();
 }
