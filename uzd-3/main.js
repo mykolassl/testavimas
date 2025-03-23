@@ -40,7 +40,7 @@ try {
     await driver.wait(until.elementLocated(By.id("simple_text")), 1_000);
     await solveCaptcha(driver);
     const firstAnswer = await getAnswer(driver);
-    console.log(`Pirmos užduoties atsakymas ${firstAnswer}`);
+    console.log(`Pirmos dalies atsakymas ${firstAnswer}`);
 
     /*
      * Antra dalis
@@ -58,7 +58,7 @@ try {
     await driver.switchTo().window(newTab);
     await solveCaptcha(driver);
     const secondAnswer = await getAnswer(driver);
-    console.log(`Antros užduoties atsakymas ${secondAnswer}`);
+    console.log(`Antros dalies atsakymas ${secondAnswer}`);
 
     await driver.quit();
 } catch (error) {
